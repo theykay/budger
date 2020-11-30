@@ -1,5 +1,5 @@
 {
-  "name": "budget-app",
+  "name": "budger",
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
@@ -10,14 +10,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/coding-boot-camp/unit18hw.git"
+    "url": "git+https://github.com/theykay/budger"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Kay Murray",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/coding-boot-camp/unit18hw/issues"
+    "url": "https://github.com/theykay/budger/issues"
   },
-  "homepage": "https://github.com/coding-boot-camp/unit18hw#readme",
+  "homepage": "https://secure-cliffs-06418.herokuapp.com/",
   "dependencies": {
     "compression": "^1.7.4",
     "express": "^4.17.1",
