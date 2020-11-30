@@ -1,3 +1,4 @@
+let Chart = require("chart.js");
 let transactions = [];
 let myChart;
 
