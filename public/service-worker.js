@@ -8,8 +8,8 @@ const filesToCache = [
   "/index.html",
   "/index.js",
   "/manifest.webmanifest",
-  "/style.css",
-  "/assets/images/icons/icon-182x192.png",
+  "/styles.css",
+  "/assets/images/icons/icon-192x192.png",
   "/assets/images/icons/icon-512x512.png"
 ];
 
