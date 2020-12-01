@@ -1,5 +1,4 @@
 # Budget Tracker
-<hr>
 
 [![github-follow](https://img.shields.io/github/followers/theykay?label=Follow&logoColor=purple&style=social)](https://github.com/theykay)
 [![license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](https://choosealicense.com/licenses/mit/)
@@ -10,7 +9,7 @@
 * [Description](#description)
 * [Technologies](#technologies)
 * [Contact](#contact)
-* [](#)
+* [License](#license)
 
 ## Links
 Deployed site (hosted on Heroku): [Budget Tracker](https://secure-cliffs-06418.herokuapp.com/)\
