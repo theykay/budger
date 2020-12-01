@@ -127,8 +127,7 @@ function sendTransaction(isAdding) {
   .then(data => {
     if (data.errors) {
       errorEl.textContent = "Missing Information";
-    }
-    else {
+    } else {
       // clear form
       nameEl.value = "";
       amountEl.value = "";
@@ -145,11 +144,11 @@ function sendTransaction(isAdding) {
 }
 
 document.querySelector("#add-btn").onclick = function(event) {
-  event.preventDefault();
+  // event.preventDefault();
   sendTransaction(true);
 };
 
 document.querySelector("#sub-btn").onclick = function(event) {
-  event.preventDefault();
+  // event.preventDefault();
   sendTransaction(false);
 };
