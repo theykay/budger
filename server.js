@@ -15,17 +15,20 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
+// routes
+app.use(require("./routes/api.js"));
+
 mongoose.connect(
   process.env.MONGODB_URI || "mongodb://localhost/budget-tracker", {
   useNewUrlParser: true,
   useUnifiedTopology: true,
   useCreateIndex: true,
   useFindAndModify: false
-});
+}).then(() => {
+  app.listen(PORT, () => {
+    console.log(`App running on port ${PORT}!`);
+  });
+}).catch((err) => {
+  console.log(err.message);
+})
 
-// routes
-app.use(require("./routes/api.js"));
-
-app.listen(PORT, () => {
-  console.log(`App running on port ${PORT}!`);
-});
