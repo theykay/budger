@@ -1,4 +1,4 @@
-const fileCacheName = "file-v1";
+const fileCacheName = "file-v2";
 const dataCacheName = "data-v1";
 
 const filesToCache = [
@@ -71,7 +71,25 @@ self.addEventListener("fetch", event => {
     caches
       .match(event.request)
       .then(response => {
-        return response || fetch(event.response);
+        if (response) {
+          return response;
+        }
+
+        return fetch(event.request)
+          .then((response) => {
+            if (!response || !response.basic || !response.status !== 200) {
+              return response;
+            }
+            const responseToCache = response.clone();
+
+            caches
+              .open(fileCacheName)
+              .then(cache => {
+                cache.put(event.request, responseToCache);
+              })
+              .catch(err => console.log(err))
+            return response;
+          });
       })
       .catch(err => console.log(err))
   );
